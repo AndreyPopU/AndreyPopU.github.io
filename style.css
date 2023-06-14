@@ -1,0 +1,311 @@
+body {
+    background-color: #1d2e1f;
+    background-image: repeating-radial-gradient(rgba(0, 0, 255, 0.2), rgba(0, 0, 255, 0.2),#1c2619  102% );
+    height: 200vh;
+    display: block;
+    font-size: 15pt;
+    text-shadow: 0 0 2px;
+    border: 0px solid rgb(255, 255, 0);
+}
+
+#title{
+    line-height: 1.8;
+    font-weight: 400;
+    color: white;
+    font-size: 50pt;
+    margin: -25px auto;
+    width: max-content;
+}
+
+.pfpImage{
+    height:15%;
+    width:15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.pfpImage img{
+    width:100%;
+    height:100%;
+    min-width: fit-content;
+    min-height: fit-content;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.quick_links{
+    line-height: 1.6;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.quick_links img{
+    margin:3px;
+    height: 35px;
+    width: 35px;
+}
+
+/*LinkedIn*/
+.quick_links #linkedin
+{
+    content: url(images/linkedin.png);
+}
+
+.quick_links #linkedin:hover
+{
+    content: url(images/linkedinactive.png);
+}
+
+/*GitHub*/
+.quick_links #github
+{
+    content: url(images/github.png);
+}
+
+.quick_links #github:hover
+{
+    content: url(images/githubactive.png);
+}
+
+/*Mail*/
+.quick_links #mail
+{
+    content: url(images/mail.png);
+}
+
+.quick_links #mail:hover
+{
+    content: url(images/mailactive.png);
+}
+
+.interaction{
+    text-align: center;
+}
+.interaction img{
+    height:90px;
+    width:90px;
+}
+
+/*Play*/
+.play
+{
+    padding-right:20px;
+    content: url(images/game.png);
+}
+
+.play:hover
+{
+    content: url(images/gameactive.png);
+}
+
+/*GitHub*/
+.hub
+{
+    padding-left:20px;
+    content: url(images/github.png);
+}
+
+.hub:hover
+{
+    content: url(images/githubactive.png);
+}
+
+.text{
+    word-wrap: break-word;
+    text-align: center;
+    margin-left:15%;
+    width:70%;
+    line-height: 1.6;
+    font-weight: 400;
+    color: white;
+    font-family: Berlin Sans FB;
+    font-size: 1.6rem;
+    letter-spacing: -.05rem;
+}
+
+.text.project{
+    font-size: 3rem;
+}
+
+.text.list{
+    text-align: left;
+}
+
+hr{
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+}
+
+.buttons{
+    font-family: Bahnschrift;
+    font-size: 15pt;
+    text-align: center;
+}
+
+.Section{
+    border: 10px;
+    align-items: center;
+}
+
+.gameImage{
+    height:40%;
+    width:40%;
+    display: block;
+    margin:auto;
+}
+
+#projectpreview{
+    line-height: 1.6;
+    text-align: center;
+}
+
+.projectbubble{
+    line-height: 1.6;
+    position: relative;
+    margin-left: 5px;
+    margin-right:5px;
+    border-radius: 50%;
+    max-width: 12vh;
+    min-width: 12vh;
+    min-height: 12vh;
+    max-height: 12vh;
+    border: 4px solid white;
+} 
+
+.projectbubble:hover,
+.projectbubble:focus{
+    border: 4px solid rgb(2, 209, 255);
+}
+
+.swiper{
+    width:60%;
+    height:fit-content;
+}
+
+.swiper img{
+    height:100%;
+    width:100%;
+    display: block;
+    margin:auto;
+}
+
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: fit-content;
+  }
+
+.image1 {
+    position: relative;
+    margin-left: 20%;
+    top: 0;
+    left: 0;
+    width:100%;
+  }
+
+.image2 {
+position: absolute;
+margin-left: 20%;
+top: 22.5%;
+left: 22.5%;
+width:55%;
+}
+
+.image3 {
+    position: absolute;
+    margin-left: 20%;
+    top: 24.7%;
+    left: 5%;
+    width:7%;
+    }
+
+.image4 {
+    position: absolute;
+    margin-left: 105%;
+    top: 49.565%;
+    left: 2%;
+    width:7%;
+}
+
+.image3:hover
+{
+    content: url(images/nextButtonLeftActive.png);
+}
+
+.image4:hover
+{
+    content: url(images/nextButtonActive.png);
+}
+
+.chart-parent{
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 15pt;
+    width: 100%;
+}
+
+.metric{
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 15pt;
+    background: rgba(255, 255, 255, 0);
+    color: white;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    text-align: left;
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.6);
+    font-family: 'cascadia', 'monospace';
+    margin-bottom: 3px;
+    min-width: 100px;
+    padding: 6px 15px;
+    width: 80%;
+}
+
+.metric-value
+{
+    line-height: 1.6;
+    font-size: 15pt;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    text-align: left;
+    float: right;
+    font-weight: bold;
+}
+
+.boxbutton{
+    -webkit-text-size-adjust: 100%;
+    overflow: visible;
+    text-transform: none;
+    color: var(--color);
+    transition: 0.25s;
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    font-family: Bahnschrift;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    --color: #ffffff;
+    --hover: #0b3a76;
+}
+
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.fill:active
+{
+    transform:scale(0.9);
+    box-shadow: 0 5px 10px #0b3a76;
+}
