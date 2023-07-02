@@ -74,9 +74,9 @@ function ShowDiv(y) {
     var x = document.getElementById(y);
 
     if (currentSubDiv != undefined)
-        {
-            currentSubDiv.style.display = 'none';
-        }
+    {
+        currentSubDiv.style.display = 'none';
+    }
 
     if (x.style.display == 'none') 
     {

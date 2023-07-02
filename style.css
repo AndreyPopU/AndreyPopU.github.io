@@ -8,92 +8,92 @@ body {
     border: 0px solid rgb(255, 255, 0);
 }
 
-#title{
-    line-height: 1.8;
-    font-weight: 400;
-    color: white;
-    font-size: 50pt;
-    text-align: center;
-    width: max-content;
-    margin-left:38%;
-    margin-top: 1%;
-}
-
-.pfpImage{
-    height:15%;
-    width:15%;
-    display: flex;
+.aboutMe {
+    height:auto;
+    width:100%;
     align-items: center;
     justify-content: center;
     margin: auto;
-    padding-top: 10px;
-    padding-bottom: 25px;
+    margin-top: 2%;
 }
-
-.pfpImage img{
-    width:100%;
-    height:100%;
-    min-width: fit-content;
-    min-height: fit-content;
+  
+#pfp {
+    width:15%;
+    height:15%;
     border-radius: 50%;
     padding: 10px;
     background-color: rgba(0,0,0,0.1);
     border: 1px solid rgba(0,0,0,0.2);
+    margin-left: 3%;
+}
+
+  .aboutText {
+    width:75%;
+    float: right;
+    margin-top: 7%;
+    margin-right: 3%;
+    font-size: 20px;
+  }
+
+  .textAbout {
+    word-wrap: break-word;
+    text-align: left;
+    line-height: 1.5;
+    font-weight: 100;
+    color: white;
+    font-family: Berlin Sans FB;
+    font-size: 1.6rem;
+  }
+
+#title{
+    color: white;
+    font-size: 50pt;
+    text-align: center;
+    width: 99%;
+    height:auto;
+    position: absolute;
 }
 
 .quick_links{
-    line-height: 1.6;
-    font-weight: 400;
-    width: 100%;
-    text-align: center;
-    color: white;
+    width:16%;
+    padding-left: 4%;
+    margin-top: 1%;
+    float: left;
 }
 
 .quick_links img{
-    margin:3px;
-    height: 35px;
-    width: 35px;
+    margin-top: 1%;
+    margin-right: 1%;
+    height: 20%;
+    width: 20%;
 }
 
 /*LinkedIn*/
-.quick_links #linkedin
-{
-    content: url(images/linkedin.png);
-}
+.quick_links #linkedin { content: url(images/linkedin.png); }
 
-.quick_links #linkedin:hover
-{
-    content: url(images/linkedinactive.png);
-}
+.quick_links #linkedin:hover { content: url(images/linkedinactive.png); }
 
 /*GitHub*/
-.quick_links #github
-{
-    content: url(images/github.png);
-}
+.quick_links #github {content: url(images/github.png); }
 
-.quick_links #github:hover
-{
-    content: url(images/githubactive.png);
-}
+.quick_links #github:hover { content: url(images/githubactive.png); }
 
 /*Mail*/
-.quick_links #mail
-{
-    content: url(images/mail.png);
-}
+.quick_links #mail { content: url(images/mail.png); }
 
-.quick_links #mail:hover
-{
-    content: url(images/mailactive.png);
-}
+.quick_links #mail:hover { content: url(images/mailactive.png); }
+
+/*GitHub*/
+.quick_links #cv {content: url(images/cv.png); }
+
+.quick_links #cv:hover { content: url(images/cvactive.png); }
 
 .interaction{
     text-align: center;
 }
 .interaction img{
-    height:90px;
-    width:90px;
+    height:5%;
+    width:5%;
 }
 
 /*Play*/
@@ -115,26 +115,24 @@ body {
     content: url(images/github.png);
 }
 
-.hub:hover
-{
-    content: url(images/githubactive.png);
-}
+.hub:hover { content: url(images/githubactive.png); }
 
 .text{
     word-wrap: break-word;
-    text-align: center;
-    margin-left:15%;
-    width:70%;
-    line-height: 1.6;
-    font-weight: 400;
+    text-align: left;
+    width:90%;
+    margin:auto;
+    line-height: 1.5;
+    font-weight: 100;
     color: white;
     font-family: Berlin Sans FB;
     font-size: 1.6rem;
-    letter-spacing: -.05rem;
 }
 
 .text.project{
     font-size: 3rem;
+    height:auto;
+    text-align: center;
 }
 
 .text.list{
@@ -142,8 +140,8 @@ body {
 }
 
 hr{
-    margin-top: 3rem;
-    margin-bottom: 3.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .buttons{
@@ -201,15 +199,14 @@ hr{
 
 .parent {
     position: relative;
-    top: 0;
-    left: 0;
-    width: 70%;
-    height: fit-content;
+    width: 80%;
+    margin:auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
   }
 
 .image1 {
     position: relative;
-    margin-left: 20%;
     top: 0;
     left: 0;
     width:100%;
@@ -217,23 +214,21 @@ hr{
 
 .image2 {
 position: absolute;
-margin-left: 20%;
-top: 22.5%;
+top: 14.5%;
 left: 22.5%;
 width:55%;
 }
 
 .image3 {
     position: absolute;
-    margin-left: 20%;
-    top: 24.7%;
+    top: 18.4%;
     left: 5%;
     width:7%;
     }
 
 .image4 {
     position: absolute;
-    margin-left: 105%;
+    margin-left: 85%;
     top: 49.565%;
     left: 2%;
     width:7%;
@@ -314,12 +309,11 @@ width:55%;
 
 @media (max-width: 600px) {
 
-    #title{
+    /* #title{
         font-size: 40pt;
-        margin: -25px auto;
         width: max-content;
-        margin-top: 10%;
-    }
+        margin:auto;
+    } */
 
     .text{
         font-size: 1.2rem;
@@ -328,24 +322,32 @@ width:55%;
         width:90%;
     }
 
-    .pfpImage{
-        height:10%;
-        width:10%;
-        padding-top: 10%;
-        padding-bottom: 5%;
+    .aboutMe{
+        max-width: max-content;
+    }
+    
+
+    #pfp {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        height: 60%;
+        border-radius: 50%;
+        padding: 10px;
+        background-color: rgba(0,0,0,0.1);
+        border: 1px solid rgba(0,0,0,0.2);
     }
 
-    .interaction{
+    .aboutText {
+        max-width: max-content;
+        width: 80%;
+        margin:auto;
+        float:none;
         text-align: center;
     }
 
-    .interaction img{
-        height:15%;
-        width:15%;
+    .textAbout{
+        font-size: 20px;
     }
-
-    .parent {
-        margin-left: -20%;
-        width: 100%;
-      }
 }
