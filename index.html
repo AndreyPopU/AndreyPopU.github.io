@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <script src="scripts/script.js"></script>
@@ -20,10 +19,10 @@
 
         <!--Image-->
         <img id="pfp" src = "images/pfp.png" draggable="false">
-        
+
         <!--Text-->
-        <h1 class="textAbout aboutText">Hello there! My name is Andrey and I am currently studying Creative Media and Game Technologies at Hanze UAS. I'm interested in developing video games. I am a self-taught programmer with passion for learning and solving coding problems in a creative way. <br> <br> If you like any of the projects I have worked on so far please don't hesitate to reach out!</h1>
-    
+        <h1 class="aboutText">Hello there! My name is Andrey and I am currently studying Creative Media and Game Technologies at Hanze UAS. I'm interested in developing video games. I am a self-taught programmer with passion for learning and solving coding problems in a creative way. <br> <br> If you like any of the projects I have worked on so far please don't hesitate to reach out!</h1>
+
         <!--Social Media-->
         <div class="quick_links">
             <a href="mailto:andreypopu@gmail.com" target="_blank"  draggable="false" ><img src = "images/mail.png" id="mail" draggable="false"></a>
@@ -33,94 +32,112 @@
         </div>
     </div>
 
-    <br><br><br>
 
-    <!--Buttons-->
+    <!--Buttons
     <section class="buttons">
         <div>
-            <!-- <button onclick = "ShowDiv('projectpreview')" class="boxbutton ripple fill">Projects</button>
-            <a href="downloads/CV - Andrey Popov.pdf" class="boxbutton ripple fill" style="text-decoration:none" target="_blank">CV</a> -->
-            <!-- <button onclick = "ShowDiv('skillspreview')" id="skillsbutton" class="boxbutton ripple fill">Skills</button>  -->
+            <button onclick = "ShowDiv('projectpreview')" class="boxbutton ripple fill">Projects</button>
+            <a href="downloads/CV - Andrey Popov.pdf" class="boxbutton ripple fill" style="text-decoration:none" target="_blank">CV</a>
+            <button onclick = "ShowDiv('skillspreview')" id="skillsbutton" class="boxbutton ripple fill">Skills</button>
         </div>
-    </section>
+    </section> -->
     <hr>
     
     <!--Projects-->
     <div id="projectpreview" style="display:block">
-        <img src="images/PreviewRestaurant.png" id="restaurantbubble" class="projectbubble" draggable="false" onclick="ShowSubDiv('Restaurant', 'restaurantbubble')">
+        <img src="images/PreviewGrocery.png" id="grocerybubble" class="projectbubble" draggable="false" onclick="ShowSubDiv('Grocery', 'grocerybubble')">
         <img src="images/PreviewSticky.png" id="stickybubble" class="projectbubble" draggable="false" onclick="ShowSubDiv('Sticky', 'stickybubble')">
         <img src="images/PreviewKnighty.png" id="knightybubble" class="projectbubble"draggable="false" onclick="ShowSubDiv('Knighty', 'knightybubble')">
-        <img src="images/PreviewWheels.png" id="wheelsbubble" class="projectbubble" draggable="false" onclick="ShowSubDiv('Wheels', 'wheelsbubble')">
+        <img src="images/PreviewRoguelike.png" id="roguelikebubble" class="projectbubble" draggable="false" onclick="ShowSubDiv('Roguelike', 'roguelikebubble')">
         <img src="images/PreviewRoll.png" id="rollbubble" class="projectbubble" draggable="false" onclick="ShowSubDiv('Roll', 'rollbubble')">
         <img src="images/PreviewBlocky.png" id="blockybubble" class="projectbubble" draggable="false" onclick="ShowSubDiv('Blocky', 'blockybubble')">
     </div>
 
 </div>
-    <!--Restaurant Project-->
-    <div class = "Section" id = "Restaurant" style="display:none">
-        <hr>
-        <h1 class="text project">Protect the Restaurant</h1> <br>
-        <h1 class="text">Protect the Restaurant is a 2D top-down game I developed for the <b>GMTK 2020 game jam</b>. The theme was “Out of Control”, and I took the approach of dealing with customers that are out of control.</h1>
-        <br>
-        <h1 class="text">The game consists of 4 levels where angry customers raid your restaurant in a wild fury, breaking all your furniture and scaring away other customers. The goal of the game is to move the furniture out of the way of the angry customer repeatedly, until their stamina runs out and they leave.</h1>
+
+
+
+    <!--Grocery Dash Project-->
+    <div class = "Section" id = "Grocery" style="display:none">
         <hr>
 
-        <!--Nintendo Preview-->
-        <div class="parent">
-            <img class="image1" src="images/borderPixel.png" draggable="false">
-            <img class="image2" id="switchRestaurant" src="images/Restaurant1.png" draggable="false">
+        <!--Title-->
+        <h1 class="text project">Grocery Dash</h1>
 
-            <img class="image3" draggable="false" src="images/nextButtonLeft.png" onclick="ShowNext('Restaurant', 'switchRestaurant', '-')">
-            <img class="image4" draggable="false" src="images/nextButton.png" onclick="ShowNext('Restaurant', 'switchRestaurant', '+')">
-        </div>  
+        <!--Trailer-->
+        <div class="trailer">
+            <div>
+                <iframe id="grocerytrailer" src="https://www.youtube.com/embed/yXpWcGiJwZA"></iframe>
+            </div>
+        </div>
 
+        <!--Links-->
         <div class="interaction">
-            <a href="https://andreypopov.itch.io/protect-the-restaurant" target="_blank" draggable="false"><img src = "images/game.png" draggable="false" class ="play"></i></a>
-            <a href="https://github.com/AndreyPopU/ProtectTheRestaurant" target="_blank" draggable="false"><img src = "images/github.png" draggable="false" class ="hub"></i></a>
+            <a href="https://andreypopov.itch.io/grocerydash" target="_blank" draggable="false"><img src = "images/game.png" draggable="false" class ="play"></i></a>
+            <a href="https://github.com/AndreyPopU/GroceryDash" target="_blank" draggable="false"><img src = "images/github.png" draggable="false" class ="hub"></i></a>
         </div>
         
+        <!--Description-->
         <hr>
-        <h1 class="text project">Development Challenges</h1>  <br>
-        <h1 class="text">Although the jam game doesn’t feature <b>A* pathfinding</b>, it was added consequently in a post-game jam version of the game. It was difficult to implement but not impossible. However, then I realized that moving furniture around doesn’t change the A* generated map, so I tried to implement <b>D* pathfinding</b> instead. However, it proved to be the hardest thing to do in the case of this project and at the time I had a main project that I was working on so I decided to leave it at that and move on.</h1>
-
+        <h1 class="text project">About</h1>  
+        <h1 class="text">Grocery Dash is a 2-4 local coop game focused on speed and teamwork. The game is set in a supermarket where players are split into teams of 2 and have to complete their shopping list before the other team in order to win. This game was one of my first-year university projects with the theme “Supermarket”. The game was meant to enhance the shopping experience and boost sales of a supermarket chain of me and my team’s choice. For this project I was the Project Owner which meant that I played a big part in making design choices for the game and pointing the direction the project is headed to. Besides that, I wrote all of the code and helped my teammates with 3D modeling. At the end of the second semester, we managed to win second place for best games made in the first year.</h1>
+        
+        <!--Development Challenges-->
         <hr>
+        <h1 class="text project">Development Challenges</h1>
+        <ul>
+            <li class="text list">Coming up with a crystal-clear Target Audience and Persona</li>
+            <li class="text list">Research on Target Audience</li>
+            <li class="text list">Utilizing Online Analytics testing method</li>
+            <li class="text list">Backing up design choices with data</li>
+        </ul>
 
+        <!--What I learned-->
+        <hr>
         <h1 class="text project">What I learned</h1>
         <ul>
-            <li class="text list">A* pathfinding</li>
-            <li class="text list">How parenting and children work</li>
-            <li class="text list">Cutscenes and dialogue</li>
+            <li class="text list">Working in a team</li>
+            <li class="text list">My first local coop game</li>
+            <li class="text list">Conveying ideas to teammates</li>
+            <li class="text list">Making a structured GDD</li>
         </ul>
         <hr>
     </div>
-    
 
 
     <!--Sticky Shot Project-->
     <div class = "Section" id = "Sticky" style="display:none">
         <hr>
-        <h1 class="text project">Sticky Shot</h1> <br>
-        <h1 class="text">This is a game made for the <b>GMTK 2021 jam</b> where the theme was “Joined Together”. In this game you use a slingshot to shoot out a slimy ball that sticks to obstacles in it’s way. As you upgrade your slingshot the ball gets launched further, sweeps away more obstacles and gets bigger, until finally it goes past the city, which is the last obstacle of the game.</h1>
-        <hr>
 
-        <!--Nintendo Preview-->
-        <div class="parent">
-            <img class="image1" src="images/borderPixel.png" draggable="false">
-            <img class="image2" id="switchSticky" src="images/Sticky1.png" draggable="false">
+        <!--Title-->
+        <h1 class="text project">Sticky Shot</h1>
 
-            <img class="image3" draggable="false" src="images/nextButtonLeft.png" onclick="ShowNext('Sticky', 'switchSticky', '-')">
-            <img class="image4" draggable="false" src="images/nextButton.png" onclick="ShowNext('Sticky', 'switchSticky', '+')">
-        </div>  
+        <!--Trailer-->
+        <div class="trailer">
+        <img src="images/shot.gif"/>
+        </div>
 
+        <!--Links-->
         <div class="interaction">
             <a href="https://andreypopov.itch.io/sticky-shot" target="_blank" draggable="false"><img src = "images/game.png" draggable="false" class ="play"></i></a>
             <a href="https://github.com/AndreyPopU/StickyShot" target="_blank" draggable="false"><img src = "images/github.png" draggable="false" class ="hub"></i></a>
         </div>
 
+        <!--Description-->
         <hr>
-        <h1 class="text project">Development Challenges</h1> <br>
-        <h1 class="text">This game is pretty simple and short, so the challenge was not in developing the game but organizing my <b>workflow</b>. I learned to use the <b>MOSCOW</b> method of development and prioritize what is important and what is unnecessary. Having a list of priorities really helped me to understand how to focus on the important features first and leave the rest for later. This ensured that even if I came short on time I would still have a game to upload at the end of the jam.</h1>
+        <h1 class="text project">About</h1>  
+        <h1 class="text">This is a game made for the <b>GMTK 2021 jam</b> where the theme was “Joined Together”. In this game you use a slingshot to shoot out a slimy ball that sticks to obstacles in it’s way. As you upgrade your slingshot the ball gets launched further, sweeps away more obstacles and gets bigger, until finally it goes past the city, which is the last obstacle of the game.</h1>
+        
+        <!--Development Challenges-->
+        <hr>
+        <h1 class="text project">Development Challenges</h1>
+        <ul>
+            <li class="text list">Achieving game loop</li>
+            <li class="text list">Balancing game</li>
+            <li class="text list">Sticking mechanic</li>
+        </ul>
 
+        <!--What I learned-->
         <hr>
         <h1 class="text project">What I learned</h1>
         <ul>
@@ -138,32 +155,40 @@
     <!--Knighty Project-->
     <div class = "Section" id = "Knighty" style="display:none">
         <hr>
-        <h1 class="text project">Knighty</h1> <br>
-        <h1 class="text">Knighty started as a simple 2D platformer tutorial with basic movement and enemies and then evolved into a much bigger project. The final product features multiple types of enemies, collectables, weapons and game mechanics. This project is one of my <b>biggest learning experiences</b> in how to design and build a game, write code, keep organized structure in a project and ultimately release a <b>finished product</b>.</h1>
-        <hr>
 
-        <!--Nintendo Preview-->
-        <div class="parent">
-            <img class="image1" src="images/borderPixel.png" draggable="false">
-            <img class="image2" id="switchKnighty" src="images/Knighty1.png" draggable="false">
+        <!--Title-->
+        <h1 class="text project">Knighty</h1>
 
-            <img class="image3" draggable="false" src="images/nextButtonLeft.png" onclick="ShowNext('Knighty', 'switchKnighty', '-')">
-            <img class="image4" draggable="false" src="images/nextButton.png" onclick="ShowNext('Knighty', 'switchKnighty', '+')">
-        </div>  
+        <!--Trailer-->
+        <div class="trailer">
+            <img src="images/knighty.gif"/>
+        </div>
 
+        <!--Links-->
         <div class="interaction">
             <a href="https://andreypopov.itch.io/knighty" target="_blank" draggable="false"><img src = "images/game.png" draggable="false" class ="play"></i></a>
             <a href="https://github.com/AndreyPopU/Knighty" target="_blank" draggable="false"><img src = "images/github.png" draggable="false" class ="hub"></i></a>
         </div>
 
+        <!--Description-->
         <hr>
-        <h1 class="text project">Development Challenges</h1> <br>
-        <h1 class="text">As I mentioned before, Knighty turned out to be a pretty big project, therefore it became harder to keep it neat and tidy, and most importantly – free of bugs. Implementing new features and making sure they don’t disrupt dynamics between old ones progressively got harder as well. Since I was going all out, I decided that a <b>Save&Load system</b> which keeps track of the stage and all of it’s entities’ positions and stats is a must-have. However, it quickly proved rather difficult to accomplish such a task, though it all worked out in the end.</h1>
+        <h1 class="text project">About</h1> 
+        <h1 class="text">Knighty started as a simple 2D platformer tutorial with basic movement and enemies and then evolved into a much bigger project. The final product features multiple types of enemies, collectables, weapons and game mechanics. This project is one of my <b>biggest learning experiences</b> in how to design and build a game, write code, keep organized structure in a project and ultimately release a <b>finished product</b>.</h1>
+        
+        <!--Development Challenges-->
+        <hr>
+        <h1 class="text project">Development Challenges</h1>
+        <ul>
+            <li class="text list">Managing a big project</li>
+            <li class="text list">Implementing diverse features and entities</li>
+            <li class="text list">Setting up 2D lighting</li>
+        </ul>
 
+        <!--What I learned-->
         <hr>
         <h1 class="text project">What I learned</h1>
         <ul>
-            <li class="text list">Class Inheritance</li>
+            <li class="text list">Dealing with Unity packages</li>
             <li class="text list">Save&Load System</li>
             <li class="text list">Keeping code simple, organized and optimized</li>
         </ul>
@@ -172,37 +197,44 @@
 
 
 
-    <!--Cold Wheels Project-->
-    <div class = "Section" id = "Wheels" style="display:none">
-        <hr>
-        <h1 class="text project">Cold Wheels</h1> <br>
-        <h1 class="text">Cold Wheels is a small project on which I worked with the goal of understanding <b>physics in Unity</b> better in mind. The game is a racing simulator type of game where you race against an AI controlled car. There are 4 different tracks on which you can race, first one to finish 3 laps wins.</h1>
+    <!--Roguelike Project-->
+    <div class = "Section" id = "Roguelike" style="display:none">
         <hr>
 
-        <!--Nintendo Preview-->
-        <div class="parent">
-            <img class="image1" src="images/borderPixel.png" draggable="false">
-            <img class="image2" id="switchWheels" src="images/Wheels1.png" draggable="false">
+        <!--Title-->
+        <h1 class="text project">Roguelike Project</h1>
 
-            <img class="image3" draggable="false" src="images/nextButtonLeft.png" onclick="ShowNext('Wheels', 'switchWheels', '-')">
-            <img class="image4" draggable="false" src="images/nextButton.png" onclick="ShowNext('Wheels', 'switchWheels', '+')">
-        </div> 
-
-        <div class="interaction">
-            <a href="https://andreypopov.itch.io/cold-wheels" target="_blank" draggable="false"><img src = "images/game.png" class ="play"></i></a>
-            <a href="https://github.com/AndreyPopU/Cold-Wheels" target="_blank" draggable="false"><img src = "images/github.png" class ="hub"></i></a>
+        <!--Trailer-->
+        <div class="trailer">
+        <img src="images/merchant.gif"/>
         </div>
 
-        <hr>
-        <h1 class="text project">Development Challenges</h1> <br>
-        <h1 class="text">One of the greater challenges this project imposed was to simulate realistic car movement which is also affected by <b>physics in Unity</b>. To do that I had examine how car suspension and drifting works in real life and try to recreate it in my game.</h1>
+        <!--Links-->
+        <div class="interaction">
+            <a href="https://github.com/AndreyPopU/MerchantBoss" target="_blank" draggable="false"><img src = "images/github.png" class ="hub"></i></a>
+        </div>
 
+        <!--Description-->
         <hr>
-        <h1 class="text project">What I learned</h1>
+        <h1 class="text project">About</h1> 
+        <h1 class="text">This project is a Roguelike RPG game I am currently working on. The game so far features 3 playable classes each with their special ability and dash, 4 types of enemies and one boss fight, along with equip-able items, class specific loot and shop system. Demo will be available soon.</h1>
+
+        <!--Developmet Challenges-->
+        <hr>
+        <h1 class="text project">Development Challenges</h1>
         <ul>
-            <li class="text list">Deeper understanding of Unity’s physics engine</li>
-            <li class="text list">Various Unity components such as joint, spring, hinge joint, etc.</li>
-            <li class="text list">Simple AI Behaviour</li>
+            <li class="text list">Building upon the game and adding new features</li>
+            <li class="text list">Unique enemy behaviors</li>
+            <li class="text list">Equipment and loot</li>
+        </ul>
+
+        <!--What I learned-->
+        <hr>
+        <h1 class="text project">What I've learned (so far)</h1>
+        <ul>
+            <li class="text list">Class Inheritance</li>
+            <li class="text list">Sprite Stitching</li>
+            <li class="text list">Pathfinding</li>
         </ul>
         <hr>
     </div>
@@ -212,28 +244,35 @@
 <!--Scoring Roll Project-->
 <div class = "Section" id = "Roll" style="display:none">
     <hr>
-    <h1 class="text project">Scoring Roll</h1> <br>
-    <h1 class="text">This is a game made for the <b>GMTK2022 game jam</b>, where the theme was “Roll of the Dice”. By rolling the dice you step on tiles and activate their effects, which then, get multiplied by the number you rolled. I am proud to say that the game turned out to be in the <b>top 500 games</b> out of 3000 submissions.</h1>
-    <hr>
 
-    <!--Nintendo Preview-->
-    <div class="parent">
-        <img class="image1" src="images/borderPixel.png" draggable="false">
-        <img class="image2" id="switchRoll" src="images/Roll1.png" draggable="false">
+    <!--Title-->
+    <h1 class="text project">Scoring Roll</h1>
 
-        <img class="image3" draggable="false" src="images/nextButtonLeft.png" onclick="ShowNext('Roll', 'switchRoll', '-')">
-        <img class="image4" draggable="false" src="images/nextButton.png" onclick="ShowNext('Roll', 'switchRoll', '+')">
-    </div> 
+    <!--Trailer-->
+    <div class="trailer">
+        <img src="images/Scoring.gif"/>
+    </div>
 
+    <!--Links-->
     <div class="interaction">
         <a href="https://andreypopov.itch.io/scoring-roll" target="_blank" draggable="false"><img src = "images/game.png" draggable="false" class ="play"></i></a>
         <a href="https://github.com/AndreyPopU/ScoringRoll" target="_blank" draggable="false"><img src = "images/github.png" draggable="false" class ="hub"></i></a>
     </div>
 
+    <!--Description-->
     <hr>
-    <h1 class="text project">Development Challenges</h1> <br>
-    <h1 class="text">The hard part of this project wasn’t developing it but coming up with a unique idea for the game. As I mentioned before, the theme is “Roll of the Dice” and although that gives us a lot of creative freedom it is easy to fall into the trap of going with the first idea in mind and creating a very basic and ordinary game. I think this is what got me ahead of other games, along with the completed look of the game.</h1>
+    <h1 class="text project">About</h1> 
+    <h1 class="text">This is a game made for the <b>GMTK2022 game jam</b>, where the theme was “Roll of the Dice”. By rolling the dice you step on tiles and activate their effects, which then, get multiplied by the number you rolled. I am proud to say that the game turned out to be in the <b>top 500 games</b> out of 3000 submissions.</h1>
 
+    <!--Development Challenges-->
+    <hr>
+    <h1 class="text project">Development Challenges</h1>
+    <ul>
+        <li class="text list">Brainstorming unique idea</li>
+        <li class="text list">Turning such a simple game into a finished product</li>
+    </ul>
+
+    <!--What I learned-->
     <hr>
     <h1 class="text project">What I learned</h1>
     <ul>
@@ -250,29 +289,35 @@
 <!--Blocky Wheels Project-->
 <div class = "Section" id = "Blocky" style="display:none">
     <hr>
-    <h1 class="text project">Blocky Wheels</h1> <br>
-    <h1 class="text">This is my <b>Highschool final project</b> and probably one of my <b>biggest projects</b>. Blocky Wheels is a 1-4 player racing simulator featuring various cars & car customization, power ups, race events, campaign mode and much more. The race events consist of transporting players into incoming traffic or activating the nitro of every player for a duration of time. Campaign mode is a prebuilt set of levels which upon completion unlock new vehicles for the player to drive. The city is <b>procedurally generated</b> and therefore can be infinite. Car traffic followed road laws such as waiting for traffic lights to turn green, or stopping before a sidewalk in case a pedestrian is crossing the road. The vehicles are able to change lanes as well.</h1>
-    <br>
-    <h1 class="text">Unfortunately, the project slowly crumbled in my attempts to implement working     multiplayer, part of the reason being that I made the mistake to start implementing it so late into development. In the end the project remained unfinished but even though I couldn’t publish the full game, it was a great learning experience and it deserves to be mentioned. Nevertheless, feel free to take a look at the GitHub page of the project (link below). </h1>
-    <hr>
-
-    <!--Nintendo Preview-->
-    <div class="parent">
-        <img class="image1" src="images/borderPixel.png" draggable="false">
-        <img class="image2" id="switchBlocky" src="images/Blocky1.png" draggable="false">
-
-        <img class="image3" draggable="false" src="images/nextButtonLeft.png" onclick="ShowNext('Blocky', 'switchBlocky', '-')">
-        <img class="image4" draggable="false" src="images/nextButton.png" onclick="ShowNext('Blocky', 'switchBlocky', '+')">
-    </div> 
     
+    <!--Title-->
+    <h1 class="text project">Blocky Wheels</h1>
+
+    <!--Trailer-->
+    <div class="trailer">
+        <img src="images/Blocky.gif"/>
+    </div>
+
+    <!--Links-->
     <div class="interaction">
         <a href="https://github.com/AndreyPopU/BlockyWheels" target="_blank" draggable="false"><img src = "images/github.png" draggable="false" class ="hub"></i></a>
     </div>
 
+    <!--Description-->
     <hr>
-    <h1 class="text project">Development Challenges</h1> <br>
-    <h1 class="text">The hardest challenge for this project was trying to understand how multiplayer in video games works and how to implement it into my game. As I mentioned before, I made the mistake of trying to implement multiplayer in the game way too late, without having prior experience with it beforehand. Being forced to test the game on 2 different devices and having the most unpredictable and inconsistent bugs slowly made me lose hope and ultimately give up.</h1>
+    <h1 class="text">This is my <b>Highschool final project</b> and probably one of my <b>biggest projects</b>. Blocky Wheels is a 1-4 player racing simulator featuring various cars & car customization, power ups, race events, campaign mode and much more. The race events consist of transporting players into incoming traffic or activating the nitro of every player for a duration of time. Campaign mode is a prebuilt set of levels which upon completion unlock new vehicles for the player to drive. The city is <b>procedurally generated</b> and therefore can be infinite. Car traffic followed road laws such as waiting for traffic lights to turn green, or stopping before a sidewalk in case a pedestrian is crossing the road. The vehicles are able to change lanes as well.</h1>
+    <h1 class="text">Unfortunately, the project slowly crumbled in my attempts to implement working multiplayer, part of the reason being that I made the mistake to start implementing it so late into development. In the end the project remained unfinished but even though I couldn’t publish the full game, it was a great learning experience and it deserves to be mentioned. Nevertheless, feel free to take a look at the GitHub page of the project (link below). </h1>
+    
+    <!--Development Challenges-->
+    <hr>
+    <h1 class="text project">Development Challenges</h1>
+    <ul>
+        <li class="text list">Implementing multiplayer</li>
+        <li class="text list">Campaign progression & Rewards</li>
+        <li class="text list">Traffic & pedestrian behavior</li>
+    </ul>
 
+    <!--What I learned-->
     <hr>
     <h1 class="text project">What I learned</h1>
     <ul>
@@ -280,7 +325,6 @@
         <li class="text list">Basic knowledge of Networking, UDP and TCP Internet Protocols</li>
         <li class="text list">Using Mirror Networking Library for Unity</li>
     </ul>
-    <hr>
     <hr>
 </div>
 

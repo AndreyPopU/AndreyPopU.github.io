@@ -14,16 +14,7 @@ function ShowNext(x, y, z)
     if (index > 2) index = 0;
     if (index < 0) index = 2;
     
-    if (x == 'Restaurant')
-    {
-        switch(index)
-        {
-            case 0: imageSwitch.src = "images/Restaurant1.png"; break;
-            case 1: imageSwitch.src = "images/Restaurant2.png"; break;
-            case 2: imageSwitch.src = "images/Restaurant3.png"; break;
-        }
-    }
-    else if (x == 'Sticky')
+    if (x == 'Sticky')
     {
         switch(index)
         {
@@ -41,13 +32,13 @@ function ShowNext(x, y, z)
             case 2: imageSwitch.src = "images/Knighty3.png"; break;
         }
     }
-    else if (x == 'Wheels')
+    else if (x == 'Roguelike')
     {
         switch(index)
         {
-            case 0: imageSwitch.src = "images/Wheels1.png"; break;
-            case 1: imageSwitch.src = "images/Wheels2.png"; break;
-            case 2: imageSwitch.src = "images/Wheels3.png"; break;
+            case 0: imageSwitch.src = "images/Roguelike1.png"; break;
+            case 1: imageSwitch.src = "images/Roguelike2.png"; break;
+            case 2: imageSwitch.src = "images/Roguelike3.png"; break;
         }
     }
     else if (x == 'Roll')
@@ -95,6 +86,16 @@ function ShowDiv(y) {
 }
 
 function ShowSubDiv(y,z) {
+
+    if (z == 'grocerybubble')
+    {
+        document.getElementById('grocerytrailer').src = 'https://www.youtube.com/embed/yXpWcGiJwZA';
+    }
+    else
+    {
+        document.getElementById('grocerytrailer').src = '';
+    }
+
     var x = document.getElementById(y);
     
     if (x.style.display == 'none') 
