@@ -87,14 +87,15 @@ function ShowDiv(y) {
 
 function ShowSubDiv(y,z) {
 
-    if (z == 'grocerybubble')
-    {
-        document.getElementById('grocerytrailer').src = 'https://www.youtube.com/embed/yXpWcGiJwZA';
-    }
-    else
-    {
-        document.getElementById('grocerytrailer').src = '';
-    }
+    // Stop/Play grocery trailer when changing bubble
+    // if (z == 'grocerybubble')
+    // {
+    //     document.getElementById('grocerytrailer').src = 'https://www.youtube.com/embed/yXpWcGiJwZA';
+    // }
+    // else
+    // {
+    //     document.getElementById('grocerytrailer').src = '';
+    // }
 
     var x = document.getElementById(y);
     
