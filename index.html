@@ -9,26 +9,40 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <script src="scripts/script.js"></script>
     <title>Andrey Popov</title>
+
+    <script>
+
+        function ShowGame(y, z) {
+
+            var x = document.getElementById('Grocery');
+
+            x.style.display = 'block';
+            currentSubDiv = document.getElementById('Grocery');
+            currentBubble = document.getElementById('grocerybubble');
+            currentBubble.style.border = '4px solid rgb(2, 209, 255)';
+        }
+
+        window.onload = ShowGame;
+
+    </script>
 </head>
 <body>
+    <div>
     <!--About Me-->
     <div class="aboutMe">
 
-        <!--Title-->
-        <div id="title">Andrey Popov</div>
-
-        <!--Image-->
-        <img id="pfp" src = "images/pfp.png" draggable="false">
+    <!--Image-->
+        <img id="pfp" src="images/pfp.png" draggable="false">
 
         <!--Text-->
-        <h1 class="aboutText">Hello there! My name is Andrey and I am currently studying Creative Media and Game Technologies at Hanze UAS. I'm interested in developing video games. I am a self-taught programmer with passion for learning and solving coding problems in a creative way. <br> <br> If you like any of the projects I have worked on so far please don't hesitate to reach out!</h1>
+        <h1 class="aboutText">Hello there! My name is Andrey and I am currently a second year studying Creative Media and Game Technologies at Hanze UAS. I am a self-taught unity game programmer with passion for designing video games and bringing creative ideas into existence. I have a handful of passion projects that I have developed and released, and I'm confident in my programming and game design skills.'. <br> <br> If you like any of the projects I have worked on so far please don't hesitate to reach out!</h1>
 
         <!--Social Media-->
         <div class="quick_links">
-            <a href="mailto:andreypopu@gmail.com" target="_blank"  draggable="false" ><img src = "images/mail.png" id="mail" draggable="false"></a>
-            <a href="https://github.com/AndreyPopU" target="_blank" draggable="false" ><img src = "images/github.png" id="github" draggable="false"></a>
-            <a href="https://www.linkedin.com/in/andrey-popov-622325258/" target="_blank" draggable="false" ><img img src=images/linkedin.png id="linkedin" draggable="false"></a>
-            <a href="downloads/CV - Andrey Popov.pdf" target="_blank"  draggable="false" ><img src = "images/cv.png" id="cv" draggable="false"></a>
+            <a href="mailto:andreypopu@gmail.com" target="_blank" draggable="false"><img src="images/mail.png" id="mail" draggable="false"></a>
+            <a href="https://github.com/AndreyPopU" target="_blank" draggable="false"><img src="images/github.png" id="github" draggable="false"></a>
+            <a href="https://www.linkedin.com/in/andrey-popov-622325258/" target="_blank" draggable="false"><img img src=images/linkedin.png id="linkedin" draggable="false"></a>
+            <a href="downloads/CV - Andrey Popov.pdf" target="_blank" draggable="false"><img src="images/cv.png" id="cv" draggable="false"></a>
         </div>
     </div>
 
