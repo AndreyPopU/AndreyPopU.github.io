@@ -15,11 +15,11 @@
         function ShowGame(y, z) {
 
             var x = document.getElementById('Grocery');
-
             x.style.display = 'block';
             currentSubDiv = document.getElementById('Grocery');
             currentBubble = document.getElementById('grocerybubble');
             currentBubble.style.border = '4px solid rgb(2, 209, 255)';
+            currentVideo = document.getElementById("GroceryVideo");
         }
 
         window.onload = ShowGame;
@@ -31,30 +31,23 @@
         <!--About Me-->
         <div class="aboutMe">
 
-            <!--Image-->
-            <img id="pfp" src="images/pfp.png" draggable="false">
+            <div id="contacts">
+                <!--Image-->
+                <img id="pfp" src="images/pfp.png" draggable="false">
 
+                <!--Social Media-->
+                <div class="quick_links">
+                    <a href="mailto:andreypopu@gmail.com" target="_blank" draggable="false"><img src="images/mail.png" id="mail" draggable="false"></a>
+                    <a href="https://github.com/AndreyPopU" target="_blank" draggable="false"><img src="images/github.png" id="github" draggable="false"></a>
+                    <a href="https://www.linkedin.com/in/andrey-popov-622325258/" target="_blank" draggable="false"><img img src=images/linkedin.png id="linkedin" draggable="false"></a>
+                    <a href="downloads/CV - Andrey Popov.pdf" target="_blank" draggable="false"><img src="images/cv.png" id="cv" draggable="false"></a>
+                </div>
+            </div>
+            
             <!--Text-->
             <h1 class="aboutText">Hello there! My name is Andrey and I am currently a second year studying Creative Media and Game Technologies at Hanze UAS. I am a self-taught unity game programmer with passion for designing video games and bringing creative ideas into existence. I have a handful of passion projects that I have developed and released, and I'm confident in my programming and game design skills. <br> <br> If you like any of the projects I have worked on so far please don't hesitate to reach out!</h1>
-
-            <!--Social Media-->
-            <div class="quick_links">
-                <a href="mailto:andreypopu@gmail.com" target="_blank" draggable="false"><img src="images/mail.png" id="mail" draggable="false"></a>
-                <a href="https://github.com/AndreyPopU" target="_blank" draggable="false"><img src="images/github.png" id="github" draggable="false"></a>
-                <a href="https://www.linkedin.com/in/andrey-popov-622325258/" target="_blank" draggable="false"><img img src=images/linkedin.png id="linkedin" draggable="false"></a>
-                <a href="downloads/CV - Andrey Popov.pdf" target="_blank" draggable="false"><img src="images/cv.png" id="cv" draggable="false"></a>
-            </div>
         </div>
 
-
-        <!--Buttons
-        <section class="buttons">
-            <div>
-                <button onclick = "ShowDiv('projectpreview')" class="boxbutton ripple fill">Projects</button>
-                <a href="downloads/CV - Andrey Popov.pdf" class="boxbutton ripple fill" style="text-decoration:none" target="_blank">CV</a>
-                <button onclick = "ShowDiv('skillspreview')" id="skillsbutton" class="boxbutton ripple fill">Skills</button>
-            </div>
-        </section> -->
         <hr>
 
         <!--Projects-->
@@ -67,7 +60,6 @@
             <img src="images/PreviewRoll.png" id="rollbubble" class="projectbubble" draggable="false" onclick="ShowSubDiv('Roll', 'rollbubble')">
             <img src="images/PreviewBlocky.png" id="blockybubble" class="projectbubble" draggable="false" onclick="ShowSubDiv('Blocky', 'blockybubble')">
         </div>
-
     </div>
 
 
@@ -79,21 +71,14 @@
         <!--Title-->
         <h1 class="text project">Grocery Dash</h1>
 
-        <!--Trailer
         <div class="trailer">
-            <div>
-                <iframe id="grocerytrailer" src="https://www.youtube.com/embed/yXpWcGiJwZA"></iframe>
-            </div>
-        </div>-->
-        <!--Trailer-->
-        <div class="trailer">
-            <img src="images/grocery.gif" />
+            <video controls src="images/grocery.mp4" width="1190" id="GroceryVideo" class="trailerVideo"></video>
         </div>
 
         <!--Links-->
         <div class="interaction">
-            <a href="https://andreypopov.itch.io/grocerydash" target="_blank" draggable="false"><img src="images/game.png" draggable="false" class="play"></i></a>
-            <a href="https://github.com/AndreyPopU/GroceryDash" target="_blank" draggable="false"><img src="images/github.png" draggable="false" class="hub"></i></a>
+            <a href="https://andreypopov.itch.io/grocerydash" target="_blank" draggable="false" class="gamelink"><img src="images/game.png" draggable="false" class="play"></a>
+            <a href="https://github.com/AndreyPopU/GroceryDash" target="_blank" draggable="false" class="gamelink"><img src="images/github.png" draggable="false" class="hub"></a>
         </div>
 
         <!--Description-->
@@ -133,7 +118,7 @@
 
         <!--Trailer-->
         <div class="trailer">
-            <img src="images/shot.gif" />
+            <video controls src="images/shot.mp4" width="1190" id="StickyVideo" class="trailerVideo"></video>
         </div>
 
         <!--Links-->
@@ -181,7 +166,7 @@
 
         <!--Trailer-->
         <div class="trailer">
-            <img src="images/eco.gif" />
+            <video controls src="images/eco.mp4" width="1190" id="Eco QuestVideo" class="trailerVideo"></video>
         </div>
 
         <!--Links-->
@@ -227,7 +212,7 @@
 
         <!--Trailer-->
         <div class="trailer">
-            <img src="images/knighty.gif" />
+            <video controls src="images/knighty.mp4" width="1190" id="KnightyVideo" class="trailerVideo"></video>
         </div>
 
         <!--Links-->
@@ -268,11 +253,11 @@
         <hr>
 
         <!--Title-->
-        <h1 class="text project">Roguelike Project</h1>
+        <h1 class="text project">Cursed Chambers</h1>
 
         <!--Trailer-->
         <div class="trailer">
-            <img src="images/merchant.gif" />
+            <video controls src="images/Roguelike.mp4" width="1190" id="RoguelikeVideo" class="trailerVideo"></video>
         </div>
 
         <!--Links-->
@@ -283,7 +268,7 @@
         <!--Description-->
         <hr>
         <h1 class="text project">About</h1>
-        <h1 class="text">This project is a Roguelike RPG game I am currently working on. The game so far features 3 playable classes each with their special ability and dash, 4 types of enemies and one boss fight, along with equip-able items, class specific loot and shop system. Demo will be available soon.</h1>
+        <h1 class="text">Cursed Chambers is a Roguelike RPG game I am currently working on. The game so far features 3 playable classes each with their special ability and dash, 4 types of enemies and one boss fight, along with equip-able items, class specific loot and shop system. Demo will be available soon.</h1>
 
         <!--Developmet Challenges-->
         <hr>
@@ -316,7 +301,7 @@
 
         <!--Trailer-->
         <div class="trailer">
-            <img src="images/Scoring.gif" />
+            <video controls src="images/Scoring.mp4" width="1190" id="RollVideo" class="trailerVideo"></video>
         </div>
 
         <!--Links-->
@@ -361,7 +346,7 @@
 
         <!--Trailer-->
         <div class="trailer">
-            <img src="images/Blocky.gif" />
+            <video controls src="images/BlockyWheels.mp4" width="1190" id="BlockyVideo" class="trailerVideo"></video>
         </div>
 
         <!--Links-->

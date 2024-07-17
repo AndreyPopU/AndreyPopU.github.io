@@ -3,6 +3,7 @@ var currentSubDiv;
 var currentBubble;
 var currentIcon;
 var index = 0;
+var currentVideo;
 
 function ShowNext(x, y, z)
 {
@@ -87,17 +88,12 @@ function ShowDiv(y) {
 
 function ShowSubDiv(y,z) {
 
-    // Stop/Play grocery trailer when changing bubble
-    // if (z == 'grocerybubble')
-    // {
-    //     document.getElementById('grocerytrailer').src = 'https://www.youtube.com/embed/yXpWcGiJwZA';
-    // }
-    // else
-    // {
-    //     document.getElementById('grocerytrailer').src = '';
-    // }
-
     var x = document.getElementById(y);
+
+    if (currentVideo != null) currentVideo.pause();
+
+    currentVideo = document.getElementById(y + "Video");
+    
     
     if (x.style.display == 'none') 
     {
