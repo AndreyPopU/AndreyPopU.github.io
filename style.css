@@ -263,57 +263,6 @@ li {
     font-size: 1.4rem;
 }
 
-@media only screen and (max-width: 1280px) {
-    .description, .description-me {
-        font-size: 0.9em;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-
-    .video {
-        width: 100%;
-    }
-
-    .screenshot {
-        width: 100%;
-    }
-
-    .square {
-        width: 100%;
-    }
-
-    .youtube {
-        height: 100%;
-    }
-
-    .description, .description-me {
-        clear: left;
-        margin-top: 2em;
-        margin-left: 0px;
-        margin-right: 0px;
-        box-sizing: border-box;
-        padding-left: 20px;
-        padding-right: 20px;
-        width: 100%;
-        height: auto;
-    }
-
-    .slide {
-        overflow-y: auto;
-        height: auto;
-    }
-
-    ::-webkit-scrollbar {
-        width: 0px; /* remove scrollbar space */
-        background: transparent;
-    }
-
-    .rsDefault .rsArrow {
-        width: 44px;
-    }
-}
-
 .title-project {
     font-family: 'Gill Sans';
     font-size: 2.4rem;
@@ -330,14 +279,6 @@ li {
     text-align: center;
     margin: auto;
     margin-top: -20%;
-}
-
-.verticalalign {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
 }
 
 #title {
