@@ -429,7 +429,7 @@ li {
 
     .title-project {
         font-family: 'Gill Sans';
-        font-size: 10vw;
+        font-size: 9vw;
     }
 
     #title {
@@ -501,7 +501,7 @@ li {
     }
 
     .description-me {
-        width: 80%;
+        width: 90%;
         height: 100%;
         float: left;
         margin-left: 5%;
