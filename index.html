@@ -15,8 +15,6 @@
 
     <!--Swiper-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <script src="scripts/script.js"></script>
 </head>
 
 <body>
@@ -29,6 +27,7 @@
             <div class="swiper-slide">
                 <div class="slide">
                     <span class="screenshot pfp square"></span>
+
                     <div class="description-me">
                         <span class="title-project">ABOUT ME</span>
                         <p>Hello there! My name is Andrey and I am a trained <span class="label orange2">Game Developer</span> with <span class="label orangeLight">7 years of expertise</span> in Unity, C# and Game Development. I really enjoy the entire process of transforming unique ideas into an exciting and fun game, from brainstorming concepts to seeing everything come together in the final product.!</p>
@@ -68,7 +67,7 @@
             <!--Grocery Game Slide-->
             <div class="swiper-slide">
                 <div class="slide">
-                    <video loop="loop" src="images/grocery.mp4" class="video" autoplay id="Video2"></video>
+                    <video loop="loop" src="images/grocery.mp4" class="video" autoplay disablePictureInPicture id="Video2"></video>
 
                     <div class="description">
 
@@ -80,7 +79,7 @@
                         </div>
 
                         <!--Game Tags-->
-                        <p><span class="label orange">Game of the Year</span><span class="label orange2">Product Owner</span><span class="label orangeLight">Teamwork</span></p>
+                        <div class="gametags"><span class="label orange">Game of the Year</span><span class="label orange2">Product Owner</span><span class="label orangeLight">Teamwork</span></div>
 
                         <!--Description-->
                         <p class="description-project">Grocery Dash is a 2-4 player local co-op game set in a supermarket, focusing on speed and teamwork. As Project Owner, I guided design decisions and wrote all the code while also assisting with 3D modeling. My team won an award for the best game of the year!</p>
@@ -93,8 +92,6 @@
                                 <li> Wrote all the code and contributed to 3D modeling, showcasing versatility in game development
                             </ul>
                         </p>
-
-
                     </div>
                 </div>
             </div>
@@ -105,7 +102,7 @@
             <div class="swiper-slide">
                 <div class="slide">
 
-                    <video loop="loop" src="images/eco.mp4" class="video" autoplay id="Video3"></video>
+                    <video loop="loop" src="images/eco.mp4" class="video" autoplay disablePictureInPicture id="Video3"></video>
 
                     <div class="description">
 
@@ -140,7 +137,7 @@
             <div class="swiper-slide">
                 <div class="slide">
 
-                    <video loop="loop" src="images/Roguelike.mp4" class="video" autoplay id="Video4"></video>
+                    <video loop="loop" src="images/Roguelike.mp4" class="video" autoplay disablePictureInPicture id="Video4"></video>
 
                     <div class="description">
 
@@ -174,7 +171,7 @@
             <div class="swiper-slide">
                 <div class="slide">
 
-                    <video loop="loop" src="images/shot.mp4" class="video" autoplay id="Video5"></video>
+                    <video loop="loop" src="images/shot.mp4" class="video" autoplay disablePictureInPicture id="Video5"></video>
 
                     <div class="description">
 
@@ -208,7 +205,7 @@
             <div class="swiper-slide">
                 <div class="slide">
 
-                    <video loop="loop" src="images/Knighty.mp4" class="video" autoplay id="Video6"></video>
+                    <video loop="loop" src="images/Knighty.mp4" class="video" autoplay disablePictureInPicture id="Video6"></video>
 
                     <div class="description">
 
@@ -242,7 +239,7 @@
             <div class="swiper-slide">
                 <div class="slide">
 
-                    <video loop="loop" src="images/Scoring.mp4" class="video" autoplay id="Video7"></video>
+                    <video loop="loop" src="images/Scoring.mp4" class="video" autoplay disablePictureInPicture id="Video7"></video>
 
                     <div class="description">
 
@@ -277,8 +274,8 @@
             <div class="swiper-slide">
                 <div class="slide">
 
-                    <video loop="loop" src="images/PortfolioAssetsVideo.mp4" class="video" autoplay id="Video8"></video>
-<!--                    <span class="landscape assets assetsquare"></span>-->
+                    <video loop="loop" src="images/PortfolioAssetsVideo.mp4" class="video" autoplay disablePictureInPicture id="Video8"></video>
+                    <!--<span class="landscape assets assetsquare"></span>-->
 
                     <div class="description">
                         <span class="title-project">Game Assets</span>
@@ -328,16 +325,7 @@
     </div>-->
         </div>
 
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-    </div>
-
-    <!--Swiper-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Pagination -->
+            <!-- Pagination -->
     <div class="pagination" id="pag">
         <img id="Page0" class="page" src="images/IconPfp.png" draggable="false" onclick="ChangeSlideTo(0)">
         <img id="Page1" class="page" src="images/HomeIcon.png" draggable="false" onclick="ChangeSlideTo(1)">
@@ -351,6 +339,13 @@
         <!--<img id="Page9" class="page" src="images/fiverr.png" draggable="false" onclick="ChangeSlideTo(9)">-->
     </div>
 
+    </div>
+
+    <!--Swiper-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    
+
 
     <script>
         var swipeIndex = 0;
@@ -360,6 +355,7 @@
             direction: 'horizontal',
             loop: true,
             simulateTouch: true,
+            threshold: 20,
 
             pagination: {
                 el: '.swiper-pagination',
@@ -368,32 +364,41 @@
             on: {
                 touchStart: function () {
                     swipeIndex = swiper.realIndex;
-                    console.log('Swipe or drag started');
+                    swiper.touches.diff = 0; 
                 },
 
                 touchEnd: function () {
 
-                    var previousVideo = document.getElementById("Video" + swiper.realIndex);
-                    var previousPage = document.getElementById("Page" + swiper.realIndex)
+                    if (Math.abs(swiper.touches.diff) > swiper.params.threshold)
+                    {
+                        var previousVideo = document.getElementById("Video" + swiper.realIndex);
+                        var previousPage = document.getElementById("Page" + swiper.realIndex)
 
-                    if (previousVideo != null) {
-                        previousVideo.pause();
-                        previousVideo.currentTime = 0;
+                        if (previousVideo != null) {
+                            previousVideo.pause();
+                            previousVideo.currentTime = 0;
+                        }
+
+                        if (previousPage != null) {
+                            previousPage.style.scale = 1;
+                            previousPage.className = "page";
+                        }
+
+                        var swipePageIndex = 0;
+
+                        // Get the previous page
+                        if (swiper.touches.diff > 0)
+                            swipePageIndex = 1;
+
+                        var page = document.getElementById("Page" + (swiper.realIndex + swipePageIndex));
+
+                        if (page != null) {
+                            page.style.scale = 1;
+                            page.className = "page";
+                        }
+                        previousIndex = swiper.realindex + swipePageIndex;
                     }
-
-                    if (previousPage != null) {
-                        previousPage.style.scale = 1;
-                        previousPage.className = "page";
-                    }
-
-                    console.log('Swipe or drag ended');
                 },
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
             },
 
             initialSlide: 1,
@@ -404,14 +409,16 @@
         homePage.style.scale = 1.3;
         homePage.className = "pageActive";
 
-        swiper.navigation.nextEl.addEventListener('click', function () {
-            // Calculate previousIndex based on realIndex
-            previousIndex = swiper.realIndex;
-        });
+        // Fixing a bug with arrows and pagination
 
-        swiper.navigation.prevEl.addEventListener('click', function () {
-            previousIndex = swiper.realIndex;
-        })
+        //swiper.navigation.nextEl.addEventListener('click', function () {
+        //    // Calculate previousIndex based on realIndex
+        //    previousIndex = swiper.realIndex;
+        //});
+
+        //swiper.navigation.prevEl.addEventListener('click', function () {
+        //    previousIndex = swiper.realIndex;
+        //})
 
         swiper.on('realIndexChange', function () {
             var previousVideo = document.getElementById("Video" + previousIndex);
@@ -460,6 +467,7 @@
                 previousPage.style.scale = 1;
                 previousPage.className = "page";
             }
+
             swiper.slideToLoop(index, 500, false);
 
             var video = document.getElementById("Video" + index);
