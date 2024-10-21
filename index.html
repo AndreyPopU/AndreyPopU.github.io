@@ -348,7 +348,6 @@
 
 
     <script>
-        var transitionAfterIndex = 0;
         var started = false;
 
         const swiper = new Swiper('.swiper', {
@@ -366,12 +365,6 @@
                 },
 
                 slideChangeTransitionStart: function () {
-                    if (!started) return;
-                    transitionAfterIndex = swiper.realIndex;
-                },
-
-                slideChangeTransitionEnd: function () {
-
                     if (!started) return;
 
                     var previousVideo = document.getElementById("Video" + swiper.previousIndex);
@@ -393,12 +386,6 @@
                     if (swiper.touches.diff > 0)
                         swipePageIndex = 1;
 
-                    var page = document.getElementById("Page" + (swiper.realIndex + swipePageIndex));
-
-                    if (page != null) {
-                        page.style.scale = 1;
-                        page.className = "page";
-                    }
                     previousIndex = swiper.realIndex + swipePageIndex;
                 },
             },
