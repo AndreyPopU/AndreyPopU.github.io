@@ -30,8 +30,8 @@
 
                     <div class="description-me">
                         <span class="title-project">ABOUT ME</span>
-                        <p>Hello there! My name is Andrey and I am a trained <span class="label orange2">Game Developer</span> with <span class="label orangeLight">7 years of expertise</span> in Unity, C# and Game Development. I really enjoy the entire process of transforming unique ideas into an exciting and fun game, from brainstorming concepts to seeing everything come together in the final product.!</p>
-                        <p>I have a handful of <span class="label orangeDark">Client Projects</span> along with game jam and passion projects that I have developed and released over the years, thus I'm confident in my programming and game design skills.</p>
+                        <p>My name is Andrey and I am a trained <span class="label orange2">Game Developer</span> with <span class="label orangeLight">7 years of expertise</span> in Unity, C# and Game Development. I enjoy the entire process of transforming unique ideas into an exciting and fun game, from brainstorming concepts to seeing everything come together in the final product!</p>
+                        <p>I have a handful of <span class="label orangeDark">Client Projects</span> along with game jam and passion projects that I have developed and released over the years, thus I'm confident in my programming and design skills.</p>
                         <p>I also enjoy making various <span class="label orange">Game Assets</span> from Templates to Systems and even Props and Packs! </p>
                         <p>Ultimately, I'm driven by a passion for game development, always eager to bring fresh ideas to life and <span class="label orangeLight">tackle new creative challenges</span></p>
                     </div>
@@ -151,14 +151,14 @@
                         <p><span class="label orange2">Game Asset</span><span class="label orangeLight">Game Design</span><span class="label orange">Code</span></p>
 
                         <!--Description-->
-                        <p class="description-project">Cursed Chambers includes a variety of character classes with unique weapons. The combat system features player dashes, intelligent enemy AI, player abilities, hit effects, enemy spawn system, traps and boss battles. This game also has a level-up and stats system, collectables, and a fully functioning dialogue and quest system for storytelling. Additionally, it incorporates optimizations such as object pooling and asynchronous scene loading.</p>
+                        <p class="description-project">Cursed Chambers includes a variety of character classes with unique weapons. The combat system features player dashes, intelligent enemy AI, player abilities, hit effects, enemy spawn system, traps and boss battles. This game also has a level-up and stats system, collectables, and a fully functioning dialogue and quest system for storytelling.</p>
 
                         <!--Achievements-->
                         <p>
                             <ul>
-                                <li> Implemented an advanced combat system, improving overall gameplay dynamics
+                                <li> Implemented an advanced combat system, improving overall gameplay
                                 <li> Integrated a fully functioning dialogue and quest system, allowing for immersive storytelling and player interaction
-                                <li> Developed a comprehensive level-up and stats system that promotes player engagement and progression.
+                                <li> Developed a comprehensive level-up and stats system that promotes player engagement and progression
                             </ul>
                         </p>
                     </div>
@@ -348,14 +348,13 @@
 
 
     <script>
-        var swipeIndex = 0;
+        var transitionAfterIndex = 0;
+        var started = false;
 
         const swiper = new Swiper('.swiper', {
-            // Optional parameters
             direction: 'horizontal',
             loop: true,
             simulateTouch: true,
-            threshold: 20,
 
             pagination: {
                 el: '.swiper-pagination',
@@ -363,41 +362,44 @@
 
             on: {
                 touchStart: function () {
-                    swipeIndex = swiper.realIndex;
-                    swiper.touches.diff = 0; 
+                    started = true;
                 },
 
-                touchEnd: function () {
+                slideChangeTransitionStart: function () {
+                    if (!started) return;
+                    transitionAfterIndex = swiper.realIndex;
+                },
 
-                    if (Math.abs(swiper.touches.diff) > swiper.params.threshold)
-                    {
-                        var previousVideo = document.getElementById("Video" + swiper.realIndex);
-                        var previousPage = document.getElementById("Page" + swiper.realIndex)
+                slideChangeTransitionEnd: function () {
 
-                        if (previousVideo != null) {
-                            previousVideo.pause();
-                            previousVideo.currentTime = 0;
-                        }
+                    if (!started) return;
 
-                        if (previousPage != null) {
-                            previousPage.style.scale = 1;
-                            previousPage.className = "page";
-                        }
+                    var previousVideo = document.getElementById("Video" + swiper.previousIndex);
+                    var previousPage = document.getElementById("Page" + swiper.previousIndex)
 
-                        var swipePageIndex = 0;
-
-                        // Get the previous page
-                        if (swiper.touches.diff > 0)
-                            swipePageIndex = 1;
-
-                        var page = document.getElementById("Page" + (swiper.realIndex + swipePageIndex));
-
-                        if (page != null) {
-                            page.style.scale = 1;
-                            page.className = "page";
-                        }
-                        previousIndex = swiper.realindex + swipePageIndex;
+                    if (previousVideo != null) {
+                        previousVideo.pause();
+                        previousVideo.currentTime = 0;
                     }
+
+                    if (previousPage != null) {
+                        previousPage.style.scale = 1;
+                        previousPage.className = "page";
+                    }
+
+                    var swipePageIndex = 0;
+
+                    // Get the previous page
+                    if (swiper.touches.diff > 0)
+                        swipePageIndex = 1;
+
+                    var page = document.getElementById("Page" + (swiper.realIndex + swipePageIndex));
+
+                    if (page != null) {
+                        page.style.scale = 1;
+                        page.className = "page";
+                    }
+                    previousIndex = swiper.realIndex + swipePageIndex;
                 },
             },
 

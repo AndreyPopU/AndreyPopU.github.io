@@ -68,19 +68,19 @@ html, body {
     font-size: 1.2vw;
     text-align: center;
     color: white;
-    padding: 5px;
+    padding: 4px;
     line-height: normal;
     padding-left: 6px;
     padding-right: 6px;
     display: inline-block;
-    margin-bottom: 0.3em;
-    margin-right: 0.3em;
+    margin-bottom: 0.2em;
+    margin-right: 0.2em;
     transition: transform 0.1s ease; /* Smooth transition */
 }
 
 .label:hover
 {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .gametags
@@ -429,6 +429,7 @@ li {
 
     .title-project {
         font-family: 'Gill Sans';
+        margin-bottom: 500px;
         font-size: 9vw;
     }
 
