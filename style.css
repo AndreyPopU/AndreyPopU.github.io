@@ -16,7 +16,6 @@ html, body {
 
 .pagination {
     width: 100%;
-    height: 10%;
     bottom: 5%;
     position: fixed;
     text-align: center;
@@ -27,6 +26,7 @@ html, body {
     border-radius: 10%;
     width: 5%;
     margin-left: 1%;
+    margin-right: 1%;
     transition: transform 0.1s ease; /* Smooth transition */
 }
 
@@ -39,6 +39,7 @@ html, body {
     border-radius: 10%;
     width: 5%;
     margin-left: 1%;
+    margin-right: 1%;
 }
 
 .header {
@@ -48,18 +49,21 @@ html, body {
 }
 
 .slide {
-    width: 100%;
+    width: 90%;
+    height: 100%;
     min-height: 75%;
     color: #000;
     position: absolute;
-    top: 14%;
+    top: 5%;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 0;
-    margin:auto;
+    margin: auto;
     text-align: left;
     overflow: visible;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .label {
@@ -78,17 +82,38 @@ html, body {
     transition: transform 0.1s ease; /* Smooth transition */
 }
 
+a {
+    color: #d86b29; /* Normal link */
+    text-decoration: none; /* Removes underline */
+
+    font-family: 'Gill Sans';
+    font-size: 1.6vw;
+    font-weight: bold;
+    font-style: normal;
+}
+
+a:hover {
+    color: #f58f2c; /* When mouse hovers over */
+}
+
+a:active {
+    color: #f58f2c; /* When clicking */
+}   
+
 .label:hover
 {
     transform: scale(1.05);
 }
 
-.gametags
-{
-    margin-top: 2%;
-    margin-bottom: 3%;
-    height:fit-content;
-    width: 100%;
+.gametags {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    transform: translateY(50%); /* Moves it up by 50% of its own height */
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .orange {
@@ -154,13 +179,26 @@ li {
     font-size: 1.2em;
 }
 
-.video {
-    margin-left: 5%;
+.video-div {
     width: 47.5%;
-    height: fit-content;
-    display: block;
     float: left;
-    clear: left;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+
+.text-div {
+    width: 47.5%;
+    float: left;
+    overflow: hidden;
+    border-radius: 6px;
+    padding-left: 2%;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    float: left;
     overflow: hidden;
     border-radius: 6px;
 }
@@ -173,12 +211,6 @@ li {
 .swiper-container {
     width: 100%;
     height: 100%;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    align-items: center;
 }
 
 .swiper-slide img {
@@ -197,11 +229,12 @@ li {
     padding-top: calc(0.32 * 100%);
 }
 
-.description {
-    width: 44%;
+.game {
+    width: 100%;
+    height: 80%;
     float: left;
-    margin-left: 20px;
-    height: 55%;
+    margin-left: 2%;
+    margin-right: 2%;
     line-height: 1.2;
     color: white;
     font-family: 'Times New Roman';
@@ -251,6 +284,7 @@ li {
     font-style: normal;
     color: white;
     text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.4);
+    height: fit-content;
 }
 
 .intro {
@@ -323,52 +357,58 @@ li {
 
 .quick_links #cv:hover { content: url(images/cvactive.png); }
 
-.downloads
-{
+.title-div {
     display: flex;
-    width:100%;
-    height: 3vw;
+    /* flex-direction: row-reverse;  Makes items start from the right */
+    width: 100%;
+    float: left;
+    height: 7vw;
 }
 
-.downloads span
-{
+.title-div span {
     float: left;
     text-align: center;
 }
 
-.downloads a {
+.title-div a {
     padding-left: 0.8em;
-    text-align:left;
-    width: 6%;
-    height: 100%;
+    text-align: left;
+    height: 60%;
 }
 
-.downloads img {
+.title-div img {
     transition: transform 0.1s ease; /* Smooth transition */
     object-fit: contain;
     width: 100%;
-    height: 100%;
+    height: 70%;
 }
 
-.downloads img:hover
-{
+.title-div img:hover {
     transform: scale(1.2);
 }
 
-@media (max-width: 600px)
-{
-    .video {
-        margin-left: 5%;
-        width: 90%;
-        height: fit-content;
-        display: block;
-        float: left;
-        clear: left;
-        overflow: hidden;
-        border-radius: 6px;
+
+/* Extra Small | < 480 */
+
+@media (max-width: 480px) {
+
+    .title-div {
+        order: 3;
     }
 
-    .description {
+    .video-div {
+        order: 2;
+    }
+
+    .text-div {
+        order: 1;
+    }
+
+    .video {
+        width: 90%;
+    }
+
+    .game {
         width: 90%;
         float: left;
         margin-left: 20px;
@@ -387,7 +427,7 @@ li {
     }
 
     .slide {
-        width: 100%;
+        width: 90%;
         height: 100%;
         min-height: 75%;
         color: #000;
@@ -400,6 +440,8 @@ li {
         margin: auto;
         text-align: left;
         overflow: visible;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     .screenshot {
@@ -407,12 +449,6 @@ li {
         width: 90%;
         height: 20%;
     }
-
-
-
-
-
-
 
     #intro-text {
         font-family: 'Bahnschrift';
@@ -448,7 +484,7 @@ li {
         margin-top: 2%;
         margin-bottom: 3%;
         height: fit-content;
-        width: 100%;
+        width: fit-content;
     }
 
     .label {
@@ -467,34 +503,34 @@ li {
     }
 
 
-    .downloads {
+    .title-div {
         display: flex;
         width: 100%;
         height: 10vw;
     }
 
-    .downloads span {
-        float: left;
-        text-align: center;
-    }
+        .title-div span {
+            float: left;
+            text-align: center;
+        }
 
-    .downloads a {
-        padding-left: 0.8em;
-        text-align: left;
-        width: 8%;
-        height: 100%;
-    }
+        .title-div a {
+            padding-left: 0.8em;
+            text-align: left;
+            width: 8%;
+            height: 100%;
+        }
 
-    .downloads img {
-        transition: transform 0.1s ease; /* Smooth transition */
-        object-fit: contain;
-        width: 100%;
-        height: 100%;
-    }
+        .title-div img {
+            transition: transform 0.1s ease; /* Smooth transition */
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
 
-    .downloads img:hover {
-        transform: scale(1.2);
-    }
+            .title-div img:hover {
+                transform: scale(1.2);
+            }
 
     ul {
         padding: 2px;
@@ -544,8 +580,38 @@ li {
         margin-left: 25%;
     }
 
-    .quick_links img {
-        height: 20%;
-        width: 10%;
+        .quick_links img {
+            height: 20%;
+            width: 10%;
+        }
+
+}
+
+/* Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+
+    }
+}
+
+/* Laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+
+    }
+}
+
+/* Desktops (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    body {
+
+    }
+}
+
+
+/* Desktops (1441 - 1920px) */
+@media (min-width: 1441px) and (max-width: 1920) {
+    body {
+
     }
 }
