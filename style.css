@@ -3,7 +3,7 @@ html, body {
     height: 100%;
     overflow: hidden;
     font-family: 'Times New Roman';
-    font-size: 10pt;
+    font-size: 1.6vw;
     font-weight: normal;
     font-style: normal;
     color: white;
@@ -16,7 +16,7 @@ html, body {
 
 .pagination {
     width: 100%;
-    bottom: 5%;
+    bottom: 3%;
     position: fixed;
     text-align: center;
     z-index: 1000;
@@ -25,21 +25,19 @@ html, body {
 .page {
     border-radius: 10%;
     width: 5%;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin: 0 0.5%;
     transition: transform 0.1s ease; /* Smooth transition */
 }
 
 .page:hover
 {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .pageActive {
     border-radius: 10%;
     width: 5%;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin: 0 0.5%;
 }
 
 .header {
@@ -49,8 +47,8 @@ html, body {
 }
 
 .slide {
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    height: 80%;
     min-height: 75%;
     color: #000;
     position: absolute;
@@ -59,17 +57,16 @@ html, body {
     left: 0;
     right: 0;
     padding: 0;
-    margin: auto;
     text-align: left;
     overflow: visible;
-    padding-left: 5%;
-    padding-right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .label {
     border-radius: 4px;
     font-family: 'Bahnschrift';
-    font-size: 1.2vw;
     text-align: center;
     color: white;
     padding: 4px;
@@ -133,7 +130,6 @@ a:active {
 }
 
 .screenshot {
-    margin-left: 5%;
     width: 50%;
     min-width: 2px;
     position: relative;
@@ -176,24 +172,10 @@ ul {
 li {
     margin-left: 1em;
     margin-bottom: 0.3em;
-    font-size: 1.2em;
-}
-
-.video-div {
-    width: 47.5%;
-    float: left;
-    overflow: hidden;
-    border-radius: 6px;
+    font-size: 1.8vw;
 }
 
 
-.text-div {
-    width: 47.5%;
-    float: left;
-    overflow: hidden;
-    border-radius: 6px;
-    padding-left: 2%;
-}
 
 .video {
     width: 100%;
@@ -219,7 +201,7 @@ li {
 }
 
 .square {
-    width: 30%;
+    width: 35%;
     padding-top: calc(0.32 * 100%);
 }
 
@@ -229,24 +211,104 @@ li {
     padding-top: calc(0.32 * 100%);
 }
 
+
+
+
+
+
 .game {
-    width: 100%;
-    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns: Video (50%) | Text (50%) */
+    gap: 20px; /* Space between columns */
+    align-items: start; /* Align items at the top */
+    width: 95%;
     float: left;
     margin-left: 2%;
     margin-right: 2%;
     line-height: 1.2;
     color: white;
     font-family: 'Times New Roman';
+    margin-top: 5%;
 }
+
+.game-description {
+    /*display: grid;
+    grid-template-columns: 1fr 1fr;*/ /* Two columns: Video (Left) | Title + Text (Right) */
+    /*gap: 20px;*/ /* Space between columns */
+    /*align-items: start;*/ /* Align items at the top */
+}
+
+.video-div {
+    grid-row: 1 / span 2; /* Spans 2 rows */
+    grid-column: 1; /* Ensures it's on the left */
+    min-height: 50px; /* Set a reasonable minimum height */
+    min-width: 50px; /* Set a reasonable minimum height */
+    height: auto;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.text-div {
+    /*grid-column: 2;*/ /* Stays in the right column */
+    /*grid-row: 2;*/
+    width: 100%;
+    float: left;
+    /*overflow: hidden;*/
+    border-radius: 6px;
+    padding-left: 2%;
+}
+
+.title-div {
+    grid-column: 2; /* Ensures it's on the right */
+    grid-row: 1;
+    display: flex;
+    /* flex-direction: row-reverse;  Makes items start from the right */
+    width: 100%;
+    float: left;
+    height: 7vw;
+}
+
+
+
+
+
+
+.title-div span {
+    float: left;
+    text-align: center;
+}
+
+.title-div a {
+    padding-left: 0.8em;
+    text-align: left;
+    height: 60%;
+}
+
+.title-div img {
+    transition: transform 0.1s ease; /* Smooth transition */
+    object-fit: contain;
+    width: 100%;
+    height: 70%;
+}
+
+.title-div img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
 
 .description-me {
     width: 60%;
-    height: 100%;
+    height: fit-content;
     float: left;
     margin-left: 20px;
     color: white;
-    font-size: 1.5vw;
     line-height: 1.2;
     font-family: 'Times New Roman';
 }
@@ -274,24 +336,20 @@ li {
     float: left;
     height: fit-content;
     font-weight: 400;
-    font-size: 1.4vw;
 }
 
 .title-project {
-    font-family: 'Gill Sans';
-    font-size: 2.5vw;
+    font-size: 3.5vw;
     font-weight: bold;
-    font-style: normal;
-    color: white;
     text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.4);
     height: fit-content;
 }
 
 .intro {
-    width: 80%;
+    width: 90%;
     text-align: center;
     margin: auto;
-    margin-top: 25%;
+    margin-top: 35%;
 }
 
 #title {
@@ -302,7 +360,7 @@ li {
     font-style: normal;
     color: white;
     text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.4);
-    margin-bottom: 0px;
+    margin: auto;
 }
 
 #intro-text {
@@ -313,28 +371,29 @@ li {
     margin-bottom: 1em;
     margin-top: 2em;
     line-height: 1.6em;
-    font-size: 1.4vw;
     text-align: center;
     letter-spacing: 0.003em;
 }
 
 .quick_links {
-    width: 90%;
-    padding-left: 5%;
-    margin-left: 32.5%;
+    width: 30%;
+    margin-top: 2%;
+    margin-left: 35%;
+    margin-right: 35%;
+    height: 10vh;
+    position: fixed;
 }
 
-.quick_links img {
-    float: left;
-    margin-top: 2%;
-    margin-right: 2%;
-    height: 10%;
-    width: 5%;
-    transition: transform 0.1s ease; /* Smooth transition */
-}
+    .quick_links img {
+        float: left;
+        margin-right: 2%;
+        margin-left: 2%;
+        width: 10%;
+        transition: transform 0.1s ease; /* Smooth transition */
+    }
 
 .quick_links img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 /*LinkedIn*/
@@ -357,180 +416,99 @@ li {
 
 .quick_links #cv:hover { content: url(images/cvactive.png); }
 
-.title-div {
-    display: flex;
-    /* flex-direction: row-reverse;  Makes items start from the right */
-    width: 100%;
-    float: left;
-    height: 7vw;
-}
-
-.title-div span {
-    float: left;
-    text-align: center;
-}
-
-.title-div a {
-    padding-left: 0.8em;
-    text-align: left;
-    height: 60%;
-}
-
-.title-div img {
-    transition: transform 0.1s ease; /* Smooth transition */
-    object-fit: contain;
-    width: 100%;
-    height: 70%;
-}
-
-.title-div img:hover {
-    transform: scale(1.2);
-}
-
 
 /* Extra Small | < 480 */
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
 
-    .title-div {
-        order: 3;
+    .game {
+        display: grid;
+        grid-template-columns: 1fr; /* Forces a single column */
+        grid-template-rows: auto auto auto; /* Ensures all items stack */
     }
 
     .video-div {
-        order: 2;
+        grid-row: 2;
+        grid-column: 1;
     }
 
     .text-div {
-        order: 1;
-    }
-
-    .video {
-        width: 90%;
-    }
-
-    .game {
-        width: 90%;
-        float: left;
-        margin-left: 20px;
-        height: 55%;
-        line-height: 1.2;
-        color: white;
-        font-family: 'Times New Roman';
+        grid-row: 3;
+        grid-column: 1;
     }
 
     .description-project {
-        width: 100%;
-        float: left;
-        height: fit-content;
-        font-weight: 400;
         font-size: 3vw;
-    }
-
-    .slide {
-        width: 90%;
-        height: 100%;
-        min-height: 75%;
-        color: #000;
-        position: absolute;
-        top: 5%;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 0;
-        margin: auto;
-        text-align: left;
-        overflow: visible;
-        padding-left: 5%;
-        padding-right: 5%;
     }
 
     .screenshot {
-        margin-left: 5%;
         width: 90%;
-        height: 20%;
+        height: 15%;
+        margin-left: 5%;
+        margin-bottom: 3%;
+    }
+
+    .slide {
+        display: block;
+    }
+
+    li {
+        font-size: 3vw;
     }
 
     #intro-text {
-        font-family: 'Bahnschrift';
-        font-weight: 400;
-        font-style: normal;
-        color: white;
-        margin-bottom: 1em;
-        margin-top: 2em;
-        line-height: 1.6em;
         font-size: 3vw;
-        text-align: center;
-        letter-spacing: 0.003em;
     }
 
     .title-project {
-        font-family: 'Gill Sans';
-        margin-bottom: 500px;
-        font-size: 9vw;
+        margin-top: 5%;
+        font-size: 6vw;
     }
 
     #title {
-        font-family: 'Gill Sans';
         font-size: 10vw;
-        font-weight: normal;
-        width: 100%;
-        font-style: normal;
-        color: white;
-        text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.4);
-        margin-bottom: 0px;
     }
 
     .gametags {
-        margin-top: 2%;
-        margin-bottom: 3%;
-        height: fit-content;
-        width: fit-content;
+        transform: translateY(100%);
     }
 
     .label {
-        border-radius: 4px;
-        font-family: 'Bahnschrift';
         font-size: 3vw;
-        text-align: center;
-        color: white;
-        padding: 5px;
-        line-height: normal;
-        padding-left: 6px;
-        padding-right: 6px;
-        display: inline-block;
-        margin-bottom: 0.3em;
-        margin-right: 0.3em;
+        padding: 2px 4px;
     }
-
 
     .title-div {
+        grid-row: 1;
+        grid-column: 1;
+        height: 11vw;
         display: flex;
         width: 100%;
-        height: 10vw;
+        transform: translateY(-50%);
     }
 
-        .title-div span {
-            float: left;
-            text-align: center;
-        }
+    .title-div span {
+        float: left;
+        text-align: center;
+        margin-top: 3%;
+    }
 
-        .title-div a {
-            padding-left: 0.8em;
-            text-align: left;
-            width: 8%;
-            height: 100%;
-        }
+    .title-div a {
+        width: 8%;
+        padding: 1%;
+        margin: 1%;
+    }
 
-        .title-div img {
-            transition: transform 0.1s ease; /* Smooth transition */
-            object-fit: contain;
-            width: 100%;
-            height: 100%;
-        }
+    .title-div img {
+        transition: transform 0.1s ease; /* Smooth transition */
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
 
-            .title-div img:hover {
-                transform: scale(1.2);
-            }
+    .title-div img:hover {
+        transform: scale(1.1);
+    }
 
     ul {
         padding: 2px;
@@ -539,79 +517,23 @@ li {
 
     .description-me {
         width: 90%;
-        height: 100%;
-        float: left;
-        margin-left: 5%;
-        color: white;
         font-size: 2.5vw;
-        line-height: 1.2;
-        font-family: 'Times New Roman';
-    }
-
-    .pagination {
-        width: 90%;
-        margin-left: 5%;
-        height: 10%;
-        bottom: 10%;
-        position: fixed;
-        text-align: center;
-        z-index: 1000;
     }
 
     .page {
-        margin: 2%;
-        border-radius: 10%;
-        width: 16%;
-        margin-left: 1%;
+        width: 14%;
+        margin: 1% 2%;
     }
 
     .pageActive {
-        margin: 2%;
-        border-radius: 10%;
-        width: 16%;
-        margin-left: 1%;
+        width: 14%;
+        margin: 1% 2%;
     }
 
     .quick_links {
-        margin-top: 3%;
-        width: 90%;
-        height: 20%;
-        text-align: center;
         margin-left: 25%;
-    }
-
-        .quick_links img {
-            height: 20%;
-            width: 10%;
-        }
-
-}
-
-/* Tablets (481px - 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-    body {
-
+        width: 60%;
     }
 }
 
-/* Laptops (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    body {
-
-    }
-}
-
-/* Desktops (1025px - 1440px) */
-@media (min-width: 1025px) and (max-width: 1440px) {
-    body {
-
-    }
-}
-
-
-/* Desktops (1441 - 1920px) */
-@media (min-width: 1441px) and (max-width: 1920) {
-    body {
-
-    }
 }
