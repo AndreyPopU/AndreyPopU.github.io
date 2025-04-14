@@ -283,7 +283,8 @@ li {
 .title-div a {
     padding-left: 0.8em;
     text-align: left;
-    height: 60%;
+    height: 70%;
+
 }
 
 .title-div img {
@@ -328,6 +329,14 @@ li {
 
 .hub:hover {
     content: url(images/githubactive.png);
+}
+
+.store {
+    content: url(images/store.png);
+}
+
+.store:hover {
+    content: url(images/storeActive.png);
 }
 
 .description-project {
@@ -378,8 +387,8 @@ li {
 .quick_links {
     width: 30%;
     margin-top: 2%;
-    margin-left: 35%;
-    margin-right: 35%;
+    margin-left: 30%;
+    margin-right: 30%;
     height: 10vh;
     position: fixed;
 }
@@ -416,8 +425,20 @@ li {
 
 .quick_links #cv:hover { content: url(images/cvactive.png); }
 
+/*Instagram*/
+.quick_links #instagram { content: url(images/instagram.png); }
 
-/* Extra Small | < 480 */
+.quick_links #instagram:hover { content: url(images/instagramActive.png); }
+
+/*TikTok*/
+.quick_links #tiktok { content: url(images/tiktok.png); }
+
+.quick_links #tiktok:hover { content: url(images/tiktokActive.png); }
+
+/*Twitter*/
+.quick_links #twitter { content: url(images/twitter.png); }
+
+.quick_links #twitter:hover { content: url(images/twitteractive.png); }
 
 @media (max-width: 767px) {
 
@@ -449,6 +470,8 @@ li {
     }
 
     .slide {
+        height:90%;
+        top: 0%;
         display: block;
     }
 
@@ -531,9 +554,137 @@ li {
     }
 
     .quick_links {
-        margin-left: 25%;
+        margin-left: 15%;
         width: 60%;
     }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .game {
+        display: grid;
+        grid-template-columns: 1fr; /* Forces a single column */
+        grid-template-rows: auto auto auto; /* Ensures all items stack */
+        margin: 5% 0% 0% 10%;
+        gap: 0px;
+    }
+
+    .game-description {
+        margin-top: 3%;
+    }
+
+    .video-div {
+        width: 80%;
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .text-div {
+        margin: 0% 0% 0% -5%;
+        width: 90%;
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    .description-project {
+        font-size: 3vw;
+    }
+
+    .screenshot {
+        width: 80%;
+        height: 15%;
+        margin-left: 10%;
+        margin-bottom: 0%;
+    }
+
+    .slide {
+        height: 90%;
+        top: 0%;
+        display: block;
+    }
+
+    li {
+        font-size: 3vw;
+    }
+
+    #intro-text {
+        font-size: 3vw;
+    }
+
+    .title-project {
+        margin-top: 5%;
+        font-size: 6vw;
+    }
+
+    #title {
+        font-size: 10vw;
+    }
+
+    .gametags {
+        margin: 0%;
+        transform: translateY(100%);
+    }
+
+    .label {
+        font-size: 3vw;
+        padding: 2px 4px;
+    }
+
+    .title-div {
+        grid-row: 1;
+        grid-column: 1;
+        height: 11vw;
+        display: flex;
+        width: 90%;
+        transform: translateY(-50%);
+    }
+
+        .title-div span {
+            float: left;
+            text-align: center;
+            margin-top: 3%;
+        }
+
+        .title-div a {
+            width: 8%;
+            padding: 1%;
+            margin: 1%;
+        }
+
+        .title-div img {
+            transition: transform 0.1s ease; /* Smooth transition */
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+
+            .title-div img:hover {
+                transform: scale(1.1);
+            }
+
+    ul {
+        padding: 2px;
+        font-size: 3vw;
+    }
+
+    .description-me {
+        width: 90%;
+        margin-left: 5%;
+        font-size: 2.5vw;
+    }
+
+    .page {
+        width: 10%;
+        margin: 0% 1% 0% 1%;
+    }
+
+    .pageActive {
+        width: 10%;
+        margin: 2%;
+    }
+
+    .quick_links {
+        margin-left: 15%;
+        width: 60%;
+    }
 }
