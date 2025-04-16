@@ -3,7 +3,7 @@ html, body {
     height: 100%;
     overflow: hidden;
     font-family: 'Times New Roman';
-    font-size: 1.6vw;
+    font-size: min(3vw, 3vh);
     font-weight: normal;
     font-style: normal;
     color: white;
@@ -76,6 +76,7 @@ html, body {
     display: inline-block;
     margin-bottom: 0.2em;
     margin-right: 0.2em;
+    font-size: 1.6vw;
     transition: transform 0.1s ease; /* Smooth transition */
 }
 
@@ -84,7 +85,7 @@ a {
     text-decoration: none; /* Removes underline */
 
     font-family: 'Gill Sans';
-    font-size: 1.6vw;
+    font-size: min(1.6vw, 1.6vh);
     font-weight: bold;
     font-style: normal;
 }
@@ -130,16 +131,7 @@ a:active {
 }
 
 .screenshot {
-    width: 50%;
-    min-width: 2px;
-    position: relative;
-    display: block;
-    float: left;
-    clear: left;
-    overflow: hidden;
-    background-size: 100%;
-    box-shadow: 4px 4px 20px -6px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
+
 }
 
 .landscape {
@@ -166,13 +158,13 @@ a:active {
 
 ul {
     padding: 2px;
-    font-size: 1.2vw;
+    font-size: min(1.2vw, 1.2vh);
 }
 
 li {
     margin-left: 1em;
     margin-bottom: 0.3em;
-    font-size: 1.8vw;
+    font-size: min(3vw, 3vh);
 }
 
 
@@ -201,16 +193,12 @@ li {
 }
 
 .square {
-    width: 35%;
-    padding-top: calc(0.32 * 100%);
+    width: 35vw;
+    height: 60vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
-.assetsquare {
-    width: 57%;
-    overflow: visible;
-    padding-top: calc(0.32 * 100%);
-}
-
 
 
 
@@ -348,7 +336,7 @@ li {
 }
 
 .title-project {
-    font-size: 3.5vw;
+    font-size: min(5vw, 5vh);
     font-weight: bold;
     text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.4);
     height: fit-content;
@@ -363,7 +351,7 @@ li {
 
 #title {
     font-family: 'Gill Sans';
-    font-size: 5vw;
+    font-size: min(9vw, 9vh);
     font-weight: normal;
     width: 100%;
     font-style: normal;
@@ -426,7 +414,7 @@ li {
 .quick_links #cv:hover { content: url(images/cvactive.png); }
 
 /*Instagram*/
-.quick_links #instagram { content: url(images/instagram.png); }
+.quick_links #instagram { content: url(images/insta.png); }
 
 .quick_links #instagram:hover { content: url(images/instagramActive.png); }
 
@@ -439,6 +427,9 @@ li {
 .quick_links #twitter { content: url(images/twitter.png); }
 
 .quick_links #twitter:hover { content: url(images/twitteractive.png); }
+
+
+
 
 @media (max-width: 767px) and (orientation: portrait) {
 
@@ -459,14 +450,11 @@ li {
     }
 
     .description-project {
-        font-size: 3vw;
+        font-size: min(3vw, 3vh);
     }
 
     .screenshot {
-        width: 90%;
-        height: 15%;
-        margin-left: 5%;
-        margin-bottom: 3%;
+        display:none;
     }
 
     .slide {
@@ -476,20 +464,20 @@ li {
     }
 
     li {
-        font-size: 3vw;
+        font-size: min(3vw, 3vh);
     }
 
     #intro-text {
-        font-size: 3vw;
+        font-size: min(3vw, 3vh);
     }
 
     .title-project {
         margin-top: 5%;
-        font-size: 6vw;
+        font-size: min(6vw, 6vh);
     }
 
     #title {
-        font-size: 10vw;
+        font-size: min(10vw, 10vh);
     }
 
     .gametags {
@@ -497,14 +485,14 @@ li {
     }
 
     .label {
-        font-size: 3vw;
+        font-size: min(3vw, 3vh);
         padding: 2px 4px;
     }
 
     .title-div {
         grid-row: 1;
         grid-column: 1;
-        height: 11vw;
+        height: min(11vw, 11vh);
         display: flex;
         width: 100%;
         transform: translateY(-50%);
@@ -535,22 +523,23 @@ li {
 
     ul {
         padding: 2px;
-        font-size: 3vw;
+        font-size: min(3vw, 3vh);
     }
 
     .description-me {
+        margin-top: 10%;
         width: 90%;
-        font-size: 2.5vw;
+        font-size: min(2.5vw, 2.5vh);
     }
 
     .page {
-        width: 14%;
-        margin: 1% 2%;
+        width: 10%;
+        margin: 1%;
     }
 
     .pageActive {
-        width: 14%;
-        margin: 1% 2%;
+        width: 10%;
+        margin: 1%;
     }
 
     .quick_links {
@@ -591,10 +580,7 @@ li {
     }
 
     .screenshot {
-        width: 80%;
-        height: 15%;
-        margin-left: 10%;
-        margin-bottom: 0%;
+        display:none;
     }
 
     .slide {
@@ -668,6 +654,7 @@ li {
     }
 
     .description-me {
+        margin-top: 10%;
         width: 90%;
         margin-left: 5%;
         font-size: 2.5vw;
@@ -680,6 +667,7 @@ li {
 
     .pageActive {
         width: 10%;
+        margin: 0% 1% 0% 1%;
         margin: 2%;
     }
 
