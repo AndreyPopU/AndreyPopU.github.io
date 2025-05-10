@@ -149,7 +149,7 @@ a:active {
 }
 
 .pfp {
-    background-image:url("images/pfpTest.png");
+    background-image:url("images/IconPfp512.png");
 }
 
 .assets {
@@ -216,7 +216,6 @@ li {
     line-height: 1.2;
     color: white;
     font-family: 'Times New Roman';
-    margin-top: 5%;
 }
 
 .game-description {
@@ -373,10 +372,10 @@ li {
 }
 
 .quick_links {
-    width: 30%;
+    width: 45%;
     margin-top: 2%;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 25%;
+    margin-right: 25%;
     height: 10vh;
     position: fixed;
 }
@@ -385,7 +384,7 @@ li {
         float: left;
         margin-right: 2%;
         margin-left: 2%;
-        width: 10%;
+        width: min(8%, 8%);
         transition: transform 0.1s ease; /* Smooth transition */
     }
 
@@ -428,8 +427,10 @@ li {
 
 .quick_links #twitter:hover { content: url(images/twitteractive.png); }
 
+/*Store*/
+.quick_links #store { content: url(images/store.png); }
 
-
+.quick_links #store:hover { content: url(images/storeActive.png); }
 
 @media (max-width: 767px) and (orientation: portrait) {
 
@@ -437,6 +438,7 @@ li {
         display: grid;
         grid-template-columns: 1fr; /* Forces a single column */
         grid-template-rows: auto auto auto; /* Ensures all items stack */
+        margin-top: 5%;
     }
 
     .video-div {
@@ -533,18 +535,13 @@ li {
     }
 
     .page {
-        width: 10%;
+        width: min(5%, 5%);
         margin: 1%;
     }
 
     .pageActive {
-        width: 10%;
+        width: min(5%, 5%);
         margin: 1%;
-    }
-
-    .quick_links {
-        margin-left: 15%;
-        width: 60%;
     }
 }
 
@@ -661,18 +658,13 @@ li {
     }
 
     .page {
-        width: 10%;
+        width: min(5%, 5%);
         margin: 0% 1% 0% 1%;
     }
 
     .pageActive {
-        width: 10%;
+        width: min(5%, 5%);
         margin: 0% 1% 0% 1%;
         margin: 2%;
-    }
-
-    .quick_links {
-        margin-left: 15%;
-        width: 60%;
     }
 }
