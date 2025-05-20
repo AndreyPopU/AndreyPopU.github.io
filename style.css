@@ -425,7 +425,7 @@ li {
 /*Twitter*/
 .quick_links #twitter { content: url(images/twitter.png); }
 
-.quick_links #twitter:hover { content: url(images/twitteractive.png); }
+.quick_links #twitter:hover { content: url(images/twitterActive.png); }
 
 /*Store*/
 .quick_links #store { content: url(images/store.png); }
